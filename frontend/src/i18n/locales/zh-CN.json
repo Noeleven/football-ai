@@ -1,0 +1,87 @@
+{
+  "app": {
+    "name": "足球AI平台",
+    "welcome": "欢迎使用足球AI平台"
+  },
+  "nav": {
+    "home": "首页",
+    "news": "资讯",
+    "teams": "球队",
+    "matches": "赛事",
+    "admin": "管理后台"
+  },
+  "home": {
+    "title": "足球AI分析平台",
+    "upcoming_matches": "即将开赛",
+    "recent_results": "最近赛果",
+    "hot_news": "热门资讯",
+    "ai_predictions": "AI预测热门赛事",
+    "view_all": "查看全部"
+  },
+  "news": {
+    "title": "足球资讯",
+    "types": {
+      "all": "全部",
+      "transfer": "转会",
+      "injury": "伤病",
+      "schedule": "赛程",
+      "general": "综合"
+    },
+    "no_news": "暂无资讯"
+  },
+  "teams": {
+    "title": "球队列表",
+    "search_placeholder": "搜索球队...",
+    "key_players": "关键球员",
+    "coach": "主教练",
+    "formation": "阵型",
+    "stats": "技术统计"
+  },
+  "players": {
+    "title": "球员",
+    "position": "位置",
+    "nationality": "国籍",
+    "age": "年龄",
+    "market_value": "身价",
+    "stats": "数据统计",
+    "injury_status": "伤病状态"
+  },
+  "matches": {
+    "title": "赛事",
+    "upcoming": "即将开赛",
+    "recent": "最近赛果",
+    "analysis": "赛事分析",
+    "prediction": {
+      "title": "AI预测",
+      "score": "预测比分",
+      "win_probability": "胜率",
+      "formation": "预测阵型",
+      "starting_xi": "预测首发",
+      "confidence": "置信度"
+    },
+    "post_match": {
+      "title": "赛后分析",
+      "events": "事件摘要",
+      "tactical": "战术分析",
+      "key_performers": "关键球员",
+      "turning_points": "转折点"
+    }
+  },
+  "admin": {
+    "title": "管理后台",
+    "dashboard": "数据概览",
+    "data_management": "数据管理",
+    "system_settings": "系统设置"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出错了",
+    "retry": "重试",
+    "save": "保存",
+    "cancel": "取消",
+    "confirm": "确认",
+    "delete": "删除",
+    "edit": "编辑",
+    "add": "添加"
+  }
+}

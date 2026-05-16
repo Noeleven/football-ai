@@ -1,0 +1,87 @@
+{
+  "app": {
+    "name": "Football AI Platform",
+    "welcome": "Welcome to Football AI Platform"
+  },
+  "nav": {
+    "home": "Home",
+    "news": "News",
+    "teams": "Teams",
+    "matches": "Matches",
+    "admin": "Admin"
+  },
+  "home": {
+    "title": "Football AI Analysis Platform",
+    "upcoming_matches": "Upcoming Matches",
+    "recent_results": "Recent Results",
+    "hot_news": "Hot News",
+    "ai_predictions": "AI Predictions",
+    "view_all": "View All"
+  },
+  "news": {
+    "title": "Football News",
+    "types": {
+      "all": "All",
+      "transfer": "Transfer",
+      "injury": "Injury",
+      "schedule": "Schedule",
+      "general": "General"
+    },
+    "no_news": "No news available"
+  },
+  "teams": {
+    "title": "Teams",
+    "search_placeholder": "Search teams...",
+    "key_players": "Key Players",
+    "coach": "Coach",
+    "formation": "Formation",
+    "stats": "Statistics"
+  },
+  "players": {
+    "title": "Players",
+    "position": "Position",
+    "nationality": "Nationality",
+    "age": "Age",
+    "market_value": "Market Value",
+    "stats": "Statistics",
+    "injury_status": "Injury Status"
+  },
+  "matches": {
+    "title": "Matches",
+    "upcoming": "Upcoming",
+    "recent": "Recent",
+    "analysis": "Analysis",
+    "prediction": {
+      "title": "AI Prediction",
+      "score": "Predicted Score",
+      "win_probability": "Win Probability",
+      "formation": "Predicted Formation",
+      "starting_xi": "Predicted XI",
+      "confidence": "Confidence"
+    },
+    "post_match": {
+      "title": "Post-Match Analysis",
+      "events": "Events Summary",
+      "tactical": "Tactical Analysis",
+      "key_performers": "Key Performers",
+      "turning_points": "Turning Points"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": "Dashboard",
+    "data_management": "Data Management",
+    "system_settings": "Settings"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add"
+  }
+}

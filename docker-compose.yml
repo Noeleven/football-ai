@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/config.yaml:/app/config.yaml
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  collector:
+    build:
+      context: ./collector_service
+      dockerfile: Dockerfile
+    environment:
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend
+
+  notification:
+    build:
+      context: ./notification_service
+      dockerfile: Dockerfile
+    environment:
+      - REDIS_HOST=redis
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - redis
+      - backend
+
+  admin:
+    build:
+      context: ./admin_panel
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
