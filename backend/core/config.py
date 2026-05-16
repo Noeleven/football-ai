@@ -93,15 +93,28 @@ class Config:
 
     @property
     def gemini_api_key(self) -> str:
-        return self.get("llm", "gemini", "api_key", default="")
+        # 优先从环境变量读取，fallback到配置文件
+        return os.environ.get("GEMINI_API_KEY") or self.get("llm", "gemini", "api_key", default="")
 
     @property
     def gemini_base_url(self) -> str:
-        return self.get("llm", "gemini", "base_url", default="https://generativelanguage.googleapis.com/v1beta")
+        return os.environ.get("GEMINI_BASE_URL") or self.get("llm", "gemini", "base_url", default="https://generativelanguage.googleapis.com/v1beta")
 
     @property
     def gemini_model(self) -> str:
-        return self.get("llm", "gemini", "model", default="gemini-2.0-flash")
+        return os.environ.get("GEMINI_MODEL") or self.get("llm", "gemini", "model", default="gemini-2.0-flash")
+
+    @property
+    def deepseek_api_key(self) -> str:
+        return os.environ.get("DEEPSEEK_API_KEY") or self.get("llm", "deepseek", "api_key", default="")
+
+    @property
+    def deepseek_base_url(self) -> str:
+        return os.environ.get("DEEPSEEK_BASE_URL") or self.get("llm", "deepseek", "base_url", default="https://api.deepseek.com/v1")
+
+    @property
+    def deepseek_model(self) -> str:
+        return os.environ.get("DEEPSEEK_MODEL") or self.get("llm", "deepseek", "model", default="deepseek-v4-flash")
 
 
 config = Config.get_instance()

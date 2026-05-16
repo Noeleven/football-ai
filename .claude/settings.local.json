@@ -9,7 +9,11 @@
       "Bash(cp -r /d/agents/football-ai/core /d/agents/football-ai/models /d/agents/football-ai/repositories /d/agents/football-ai/services /d/agents/football-ai/api /d/agents/football-ai/cli /d/agents/football-ai/utils /d/agents/football-ai/config.py /d/agents/football-ai/requirements.txt /d/agents/football-ai/data /d/agents/football-ai/backend/)",
       "Bash(rm -rf /d/agents/football-ai/core /d/agents/football-ai/models /d/agents/football-ai/repositories /d/agents/football-ai/services /d/agents/football-ai/api /d/agents/football-ai/cli /d/agents/football-ai/utils /d/agents/football-ai/config.py /d/agents/football-ai/requirements.txt /d/agents/football-ai/data)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git remote *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git checkout *)"
     ]
   }
 }
