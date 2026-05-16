@@ -13,7 +13,21 @@
       "Bash(git remote *)",
       "Bash(git commit *)",
       "Bash(git push *)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(git filter-branch *、)",
+      "Bash(git reset *)",
+      "Bash(git stash *)",
+      "Bash(git update-ref *)",
+      "Bash(export FILTER_BRANCH_SQUELCH_WARNING=1)",
+      "Bash(git filter-branch *)",
+      "Bash(pip install *)",
+      "Bash(python -c \"import git_filter_repo\")",
+      "Bash(git clean *)",
+      "Bash(git fetch *)",
+      "Bash(python -m git_filter_repo --version)",
+      "Bash(python -c \"from git_filter_repo import main; print\\('available'\\)\")",
+      "Bash(git filter-repo *)",
+      "Bash(grep -E \"api_key.*[A-Za-z0-9]{20,}\")"
     ]
   }
 }

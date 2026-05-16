@@ -1,0 +1,103 @@
+# ===========================================
+# 足球AI平台配置文件
+# Football AI Platform Configuration
+# ===========================================
+
+app:
+  name: "Football AI Platform"  # 应用名称
+  debug: false                    # 是否开启调试模式（生产环境设为false）
+  log_level: "INFO"              # 日志级别：DEBUG/INFO/WARN/ERROR
+
+# -------------------------------------------
+# 数据库配置 (Database)
+# ------------------------------------------
+database:
+  provider: "sqlite"            # 数据库类型：sqlite/postgresql/mysql
+  path: "data/football.db"      # SQLite数据库文件路径
+
+# -------------------------------------------
+# Redis缓存配置 (Cache)
+# ------------------------------------------
+redis:
+  host: "localhost"            # Redis服务器地址
+  port: 6379                   # Redis端口
+  db: 0                        # Redis数据库编号
+  password: ""                  # Redis密码（无密码则留空）
+  prefix: "football_ai:"        # 键名前缀，用于隔离不同环境的数据
+
+# -------------------------------------------
+# 大语言模型配置 (LLM) - 密钥通过环境变量设置
+# ------------------------------------------
+llm:
+  provider: "gemini"            # LLM提供商：gemini/openai/deepseek
+
+  # Google Gemini 配置
+  gemini:
+    api_key: ""                 # API密钥（通过GEMINI_API_KEY环境变量设置）
+    base_url: "https://generativelanguage.googleapis.com/v1beta"
+    model: "gemini-2.0-flash"
+
+  # DeepSeek 配置（可选）
+  deepseek:
+    api_key: ""                 # API密钥（通过DEEPSEEK_API_KEY环境变量设置）
+    base_url: "https://api.deepseek.com/v1"
+    model: "deepseek-v4-flash"
+
+# -------------------------------------------
+# HTTP客户端配置 (Network)
+# ------------------------------------------
+http:
+  timeout: 30
+  max_retries: 3
+  retry_base_delay: 1.0
+
+# -------------------------------------------
+# 缓存配置 (Cache Settings)
+# ------------------------------------------
+cache:
+  enable: true
+  ttl_seconds: 3600
+
+# -------------------------------------------
+# AI预测权重配置 (Prediction)
+# ------------------------------------------
+prediction:
+  weights:
+    form: 0.25
+    head_to_head: 0.20
+    home_away: 0.15
+    injury: 0.15
+    tactics: 0.25
+  confidence_thresholds:
+    high: 0.75
+    medium: 0.55
+  timeout: 60
+  max_retries: 3
+
+# -------------------------------------------
+# 数据采集服务配置 (Collector)
+# ------------------------------------------
+collector:
+  schedulers:
+    news_interval_minutes: 1440
+    match_interval_minutes: 1440
+    transfer_interval_minutes: 1440
+  sources:
+    - name: "espn"
+      base_url: "https://www.espn.com"
+    - name: "transfermarkt"
+      base_url: "https://www.transfermarkt.com"
+
+# -------------------------------------------
+# 通知服务配置 (Notification)
+# ------------------------------------------
+notification:
+  channels:
+    email:
+      enabled: false
+      smtp_host: "smtp.example.com"
+      smtp_port: 587
+      smtp_user: ""
+      smtp_password: ""
+    websocket:
+      enabled: true
